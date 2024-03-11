@@ -8,137 +8,140 @@ namespace Zadania_testowe_na_sprawdzian_kolekcj {
     internal class Program{
         static void Main(string[] args){
             // zad 1
-            /*Console.Write("Wpisz dlugosc listy: ");
+            Console.Write("Wpisz dlugosc listy: ");
             int userNumber = int.Parse(Console.ReadLine());
             int[] n = new int[userNumber];
-            for ( int i = 0; i < n.Length; i++){
+            for (int i = 0; i < n.Length; i++) {
                 n[i] = int.Parse(Console.ReadLine());
             }
             List<int> nList = n.ToList();
-            for (int i = 1; i < n.Length; i+=2){
-                if (n[i-1] + 2 == n[i]){
-                    nList.Remove(n[i-1]);
+            for (int i = 1; i < n.Length; i += 2) {
+                if (n[i - 1] + 2 == n[i]) {
+                    nList.Remove(n[i - 1]);
                     nList.Remove(n[i]);
                 }
-                if (n[i+1] - 2 == n[i]){
-                    nList.Remove(n[i+1]);
+                if (n[i + 1] - 2 == n[i]) {
+                    nList.Remove(n[i + 1]);
                     nList.Remove(n[i]);
                 }
             }
-            foreach (int num in nList){
+            foreach (int num in nList) {
                 Console.Write(num + " ");
             }
-            Console.WriteLine();*/
+            Console.WriteLine();
 
             // zad 2
-            /*            Console.Write("Wprowadz wers z Pana Tadeusza: ");
-                        string wersTadeusz = Console.ReadLine();
-                        char[] wtChar = wersTadeusz.ToCharArray();
-                        Dictionary<char, int> wtCharDictionary = new Dictionary<char, int>();
-                        for (int i = 0; i < wtChar.Length; i++){
-                            if (wtChar[i] == ' '){
-                                continue;
-                            }
-                            if (!(wtCharDictionary.ContainsKey(wtChar[i])))
-                            {
-                                wtCharDictionary.Add(wtChar[i], 0);
-                            }
-                            if (wtCharDictionary.ContainsKey(wtChar[i])){
-                                wtCharDictionary[wtChar[i]]++;
-                            }
-                        }
-                        foreach (var item in wtCharDictionary){
-                            if (item.Value >= 3){
-                                Console.WriteLine($"Litera {item.Key} pojawia sie co najmniej 3 razy, a dokladniej {item.Value} razy");
-                            }
-                        }*/
+            Console.Write("Wprowadz wers z Pana Tadeusza: ");
+            string wersTadeusz = Console.ReadLine();
+            char[] wtChar = wersTadeusz.ToCharArray();
+            Dictionary<char, int> wtCharDictionary = new Dictionary<char, int>();
+            for (int i = 0; i < wtChar.Length; i++) {
+                if (wtChar[i] == ' ') {
+                    continue;
+                }
+                if (!(wtCharDictionary.ContainsKey(wtChar[i]))) {
+                    wtCharDictionary.Add(wtChar[i], 0);
+                }
+                if (wtCharDictionary.ContainsKey(wtChar[i])) {
+                    wtCharDictionary[wtChar[i]]++;
+                }
+            }
+            foreach (var item in wtCharDictionary) {
+                if (item.Value >= 3) {
+                    Console.WriteLine($"Litera {item.Key} pojawia sie co najmniej 3 razy, a dokladniej {item.Value} razy");
+                }
+            }
 
             // zad 3
-            /* Console.Write("Podaj pierwsza liczbe brytyjska: ");
-             int numBritish = int.Parse(Console.ReadLine());
-             Console.WriteLine();
-             Console.Write("Podaj druga liczbe brytyjska: ");
-             int numBritish2 = int.Parse(Console.ReadLine());
-             Console.WriteLine();
+            Console.Write("Podaj pierwsza liczbe brytyjska: ");
+            int numBritish = int.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.Write("Podaj druga liczbe brytyjska: ");
+            int numBritish2 = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
-             Console.WriteLine($"liczby pierwzse z zakresu od {numBritish} do {numBritish2} ");
-             for (int i = numBritish; i <= numBritish2; i++){
-                 if (isPrime(i)){
-                     Console.Write(i + " ");
-                 }
-             }*/
+            Console.WriteLine($"liczby pierwzse z zakresu od {numBritish} do {numBritish2} ");
+            for (int i = numBritish; i <= numBritish2; i++) {
+                if (isPrime(i)) {
+                    Console.Write(i + " ");
+                }
+            }
 
             // zad 4
-            /*Random random = new Random();
+            Random random = new Random();
             List<Osoba> osoby = new List<Osoba>();
             string letters = "abcdefghijklmnopqrstuvwxyz";
-            for (int i = 0; i <= 4; i++){
+            for (int i = 0; i <= 4; i++) {
                 int age = random.Next(20, 51);
                 string firstName = "a";
                 string lastName = "";
-                for (int j = 1; j <= 4; j++){
+                for (int j = 1; j <= 4; j++) {
                     firstName += letters[random.Next(0, letters.Length)];
                 }
                 List<char> lastNameList = firstName.ToCharArray().ToList();
                 lastNameList.Reverse();
-                foreach (char c in lastNameList){
+                foreach (char c in lastNameList) {
                     lastName += c;
                 }
                 Osoba osoba = new Osoba(age, firstName, lastName);
                 osoby.Add(osoba);
             }
 
-            foreach (var osoba in osoby){
+            foreach (var osoba in osoby) {
                 Console.Write($"{osoba.age}; {osoba.firstName}; {osoba.lastName}");
                 Console.WriteLine();
             }
-            Console.WriteLine();*/
+            Console.WriteLine();
 
             // zad 5
-            /*Queue<int> qOfDNums = new Queue<int>();
-            for (int i = 6; i <= 100000; i++){
-                if (qOfDNums.Count == 4){
+            Queue<int> qOfDNums = new Queue<int>();
+            for (int i = 6; i <= 100000; i++) {
+                if (qOfDNums.Count == 4) {
                     break;
                 }
-                if (isDoskonala (i)){
-                    qOfDNums.Enqueue (i);
+                if (isDoskonala(i)) {
+                    qOfDNums.Enqueue(i);
                 }
             }
-            foreach (int num in qOfDNums){
+            foreach (int num in qOfDNums) {
                 Console.Write(num + " ");
             }
-            qOfDNums.Dequeue ();
-            qOfDNums.Dequeue ();
+            qOfDNums.Dequeue();
+            qOfDNums.Dequeue();
 
             Console.WriteLine();
-            foreach (int num in qOfDNums){
+            foreach (int num in qOfDNums) {
                 Console.Write(num + " ");
-            }*/
+            }
 
             // zad 6
-            /*Stack<int> stackOf13 = new Stack<int>();
-            for(int i = 13; i <= 100; i += 13){
+            Stack<int> stackOf13 = new Stack<int>();
+            for (int i = 13; i <= 100; i += 13) {
                 stackOf13.Push(i);
             }
-            foreach (int num in stackOf13){
+            foreach (int num in stackOf13) {
                 Console.Write(num + " ");
             }
             Console.WriteLine();
             stackOf13.Pop();
             stackOf13.Pop();
-            foreach (int num in stackOf13){
+            foreach (int num in stackOf13) {
                 Console.Write(num + " ");
-            }*/
+            }
 
             // zad 7
             Console.Write("Podaj ilosc ciagow: ");
             int numOfCiags = int.Parse(Console.ReadLine());
             string[] ciags = new string[numOfCiags];
+            Dictionary<string, string> ciagsD = new Dictionary<string, string>();
             for (int i = 0; i < numOfCiags; i++){
                 string ciag = Console.ReadLine();
                 ciags[i] = ciag;
             }
-            Console.WriteLine(Code("AAAAABBBBBBBCCC"));
+            
+            for (int i = 0; i < numOfCiags; i++) {
+                ciagsD.Add(Code(ciags[i]), ciags[i]);
+            }
 
             Console.ReadKey();
         }
@@ -170,7 +173,7 @@ namespace Zadania_testowe_na_sprawdzian_kolekcj {
             Dictionary<char, int> codes = new Dictionary<char, int>();
             for (int i = 0; i < s.Length; i++){
                 if (!codes.ContainsKey(c[i])) {
-                    codes.Add();
+                    codes.Add(s[i], 0);
                 }
                 if (codes.ContainsKey(s[i])){
                     codes[s[i]]++;
