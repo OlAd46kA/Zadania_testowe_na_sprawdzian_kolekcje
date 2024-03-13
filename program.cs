@@ -142,7 +142,10 @@ namespace Zadania_testowe_na_sprawdzian_kolekcj {
             for (int i = 0; i < numOfCiags; i++) {
                 ciagsD.Add(Code(ciags[i]), ciags[i]);
             }
-
+            
+            foreach (var item in ciagsD) {
+                Console.WriteLine(item.Key + " : " + item.Value);
+            }
             Console.ReadKey();
         }
 
@@ -181,8 +184,8 @@ namespace Zadania_testowe_na_sprawdzian_kolekcj {
             }
             string res = "";
             foreach (var item in codes) {
-                res += item.Key;
                 res += item.Value;
+                res += item.Key;
             }
             return res;
         }
